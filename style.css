@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box; /* makes sure everything in section fits */
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    height: 100%; /* makes sure the page always fills the full screen height */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* prevents side scrolling */
+    background-color: #f4f4f4;
+}
+
+body {
+    display: flex; /* makes body a flex container */
+    flex-direction: column; /* lays out children vertically (top to bottom) */
+    min-height: 100vh; /* ensures page fills screen height */
+}
+
+header {
+    background: black;
+    color: white;
+    display: flex; /* makes the header a flexbox display */
+    align-items: center; /* vertically centers logo and nav */
+    justify-content: space-between; /* pushes logo and nav to ends */
+    padding: 15px 40px; /* top/bottom = 15px, left/right = 40px */
+    width: 100%;
+}
+
+nav ul {
+    list-style: none; /* removes default bullet points from list */
+    display: flex; /* makes nav list a horizontal row */
+}
+
+nav ul li {
+    margin: 5px 15px; /* vertical spacing = 5px, horizontal = 15px */
+}
+
+nav ul li a {
+    text-decoration: none; /* removes underline from nav links */
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* gold on hover */
+}
+
+nav ul li a.active {
+    color: #FFD700;
+    text-decoration: underline; /* underline current page link */
+}
+
+.welcome {
+    display: flex; /* makes main section a flexbox container */
+    flex-direction: column; /* stacks children vertically */
+    justify-content: center; /* vertically centers content */
+    align-items: center; /* horizontally centers content */
+    text-align: center;
+    background: url('images/pool.jpg') no-repeat center center/cover; /* covers entire section with centered, non-repeating image */
+    flex: 1; /* fills the remaining height between header and footer */
+}
+
+.welcome h1 {
+    font-size: 3em; /* 3x base font size */
+    text-shadow: 4px 4px 4px black; /* subtle 3D-style shadow */
+    color: gold;
+    margin: 30px;
+}
+
+.welcome p {
+    margin: 35px 0 20px; /* top = 20px, bottom = 30px */
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+}
+
+.welcome .about-button {
+    margin: 20px;
+    padding: 10px 20px;
+    background: gold;
+    color: black;
+    font-weight: bold;
+    text-decoration: none; /* removes underline */
+    border-radius: 5px;
+    cursor: pointer; /* shows pointer on hover */
+}
+
+.welcome .about-button:hover {
+    background: #ffcc00; /* darker gold on hover */
+}
+
+.about, .contact, .stats {
+    padding: 5% 15%; /* top/bottom = 5% of screen height, sides = 15% of screen width */
+    background-color: white;
+    color: #333333;
+    text-align: left;
+    line-height: 1.5; /* 1.5x line spacing for readability */
+    flex: 1; /* ensures section fills available space */
+    display: flex; /* flex container for potential inner layout */
+    flex-direction: column;
+    background: url('images/pool.jpg') no-repeat center center/cover; /* covers entire section with centered, non-repeating image */
+}
+
+.contact h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: gold;
+    text-shadow: 3px 3px 3px black;
+}
+
+.about h1, .stats h1{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: gold;
+    text-shadow: 3px 3px 3px black;
+}
+
+.about p, .contact p, .stats p{
+    margin-bottom: 25px;
+    font-size: 18px;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+}
+
+.contact p {
+    text-shadow: 3px 3px 3px black;
+}
+
+.about p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contact-info p {
+    margin-bottom: 10px; /* spacing between contact lines */
+}
+
+.contact-questions p {
+    padding-bottom: 5px;
+    font-size: 19.6px;
+    text-shadow: 5px 5px 5px black;
+    border-bottom: 2px solid gold;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: gold;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #ffcc00;
+}
+
+.stat-section {
+    margin-bottom: 40px; /* spacing between each stats section */
+}
+
+.stat-section h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    border-bottom: 2px solid gold;
+    padding-bottom: 5px;
+}
+
+.stat-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.stat-section li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    line-height: 35px;
+}
+
+.stat-section li strong {
+    font-size: 20px;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+}
+
+.meets {
+    padding: 5% 15%; /* adds top/bottom and left/right spacing */
+    background-color: white;
+    color: #333;
+    flex: 1; /* fills remaining vertical space */
+    display: flex;
+    flex-direction: column;
+    background: url('images/pool.jpg') no-repeat center center/cover; /* covers entire section with centered, non-repeating image */
+}
+
+.meet {
+    margin-bottom: 40px; /* space between each meet */
+    padding: 20px;
+    background-color: #f9f9f9; /* gives each box a gray background */
+    border-left: 5px solid gold;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.meets h1 {
+    font-size: 2.5em; /* large page title */
+    margin-bottom: 30px;
+    color: gold;
+    text-shadow: 3px 3px 3px black;
+}
+
+.meet h2 {
+    font-size: 1.8em;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.meet p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    color: white;
+    width: 100%;
+}
